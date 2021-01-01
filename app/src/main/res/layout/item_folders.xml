@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp">
+
+    <com.skydoves.transformationlayout.TransformationLayout
+        android:id="@+id/transformationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:transformation_duration="550">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp">
+
+            <LinearLayout
+                android:id="@+id/folderContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/fab_gradiant"
+                android:padding="16dp">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:id="@+id/folderName"
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:text="@string/dashboard"
+                       android:textSize="18sp"
+                       android:layout_weight="1"
+                       android:textColor="@color/white" />
+
+                   <ImageButton
+                       android:id="@+id/star"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:background="@null"
+                       android:src="@drawable/star_selector"/>
+
+               </LinearLayout>
+
+                <TextView
+                    android:id="@+id/completedMetric"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_marginTop="16sp"
+                    tools:text="8/15 Completed"
+                    android:textColor="@color/white_70" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </com.skydoves.transformationlayout.TransformationLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/background_gradiant">
+
+    <com.skydoves.transformationlayout.TransformationLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:transformation_duration="50">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="70dp"
+            android:elevation="4dp"
+            card_view:cardPreventCornerOverlap="false">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/splash"/>
+        </androidx.cardview.widget.CardView>
+    </com.skydoves.transformationlayout.TransformationLayout>
+
+</LinearLayout>
