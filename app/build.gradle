@@ -37,8 +37,8 @@ android {
         freeCompilerArgs += "-Xopt-in=kotlinx.coroutines.ExperimentalCoroutinesApi"
     }
 
-    buildFeatures {
-        viewBinding true
+    viewBinding {
+        enabled = true
     }
 }
 

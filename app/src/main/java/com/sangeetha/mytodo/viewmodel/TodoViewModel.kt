@@ -41,7 +41,7 @@ class TodoViewModel @ViewModelInject constructor(
     }
 
     fun getAllTodo() = viewModelScope.async(Dispatchers.IO) {
-        repository.getAllTodo()
+        repository.getAllTasks()
     }
 
     fun getAllTodoFolders() = viewModelScope.async(Dispatchers.IO) {

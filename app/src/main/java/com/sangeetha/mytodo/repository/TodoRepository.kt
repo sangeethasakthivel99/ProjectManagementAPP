@@ -10,7 +10,8 @@ interface TodoRepository {
     suspend fun insertTodoFolder(project: ProjectEntity)
     suspend fun deleteTodoById(todoId: Long)
     suspend fun deleteFolderById(folderId: Long)
-    suspend fun getAllTodo(): Flow<List<TaskEntity>>
+    fun getAllTasks(): Flow<List<TaskEntity>>
+    fun getTasks(searchQuery: String): Flow<List<TaskEntity>>
     suspend fun getAllTodoFolders(): Flow<List<ProjectEntity>>
     suspend fun getTodoById(id: Long): Flow<TaskEntity>
     suspend fun getTodoByDueDate(dueDate: String): Flow<List<TaskEntity>>

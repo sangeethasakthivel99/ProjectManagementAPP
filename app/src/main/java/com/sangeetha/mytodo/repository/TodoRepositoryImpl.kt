@@ -26,8 +26,12 @@ class TodoRepositoryImpl @Inject constructor(
         return taskDao.deleteFolderById(folderId)
     }
 
-    override suspend fun getAllTodo(): Flow<List<TaskEntity>> {
+    override fun getAllTasks(): Flow<List<TaskEntity>> {
         return taskDao.getAllToDos()
+    }
+
+    override fun getTasks(searchQuery: String): Flow<List<TaskEntity>> {
+        return taskDao.getTask(searchQuery)
     }
 
     override suspend fun getAllTodoFolders(): Flow<List<ProjectEntity>> {

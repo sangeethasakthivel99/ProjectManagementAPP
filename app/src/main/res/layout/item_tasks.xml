@@ -7,7 +7,7 @@
     android:layout_margin="16dp">
 
     <androidx.appcompat.widget.AppCompatCheckBox
-        android:id="@+id/checkbox"
+        android:id="@+id/completedCheckbox"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_gravity="center"
@@ -37,6 +37,7 @@
                 android:src="@drawable/dot" />
 
             <TextView
+                android:id="@+id/taskName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/arima_madurai_medium"

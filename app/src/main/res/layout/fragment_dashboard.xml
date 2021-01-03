@@ -121,7 +121,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             tools:itemCount="2"
-            tools:listitem="@layout/item_todo"/>
+            tools:listitem="@layout/item_tasks"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

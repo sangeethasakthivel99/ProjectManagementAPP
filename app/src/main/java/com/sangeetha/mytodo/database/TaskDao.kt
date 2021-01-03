@@ -28,6 +28,10 @@ interface TaskDao {
     fun getAllToDos(): Flow<List<TaskEntity>>
 
     @Transaction
+    @Query("SELECT * FROM taskentity WHERE title LIKE '%' || :searchQuery || '%'")
+    fun getTask(searchQuery: String): Flow<List<TaskEntity>>
+
+    @Transaction
     @Query("SELECT * FROM taskentity WHERE taskId = :id")
     fun getTodoById(id: Long): Flow<TaskEntity>
 
