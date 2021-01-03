@@ -87,7 +87,6 @@ dependencies {
     implementation 'com.github.lzyzsd:circleprogress:1.2.1'
 
     //Data store
-    implementation "androidx.datastore:datastore-preferences:1.1.1"
 
     //Navigation
     implementation "androidx.navigation:navigation-fragment-ktx:$navigation"

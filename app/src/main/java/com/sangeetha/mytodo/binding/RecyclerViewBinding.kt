@@ -1,9 +1,5 @@
 package com.sangeetha.mytodo.binding
 
-import androidx.recyclerview.widget.RecyclerView
-import com.sangeetha.mytodo.database.TodoFolderEntity
-import com.sangeetha.mytodo.view.adapters.FolderAdapter
-
 object RecyclerViewBinding {
 
 //    @JvmStatic

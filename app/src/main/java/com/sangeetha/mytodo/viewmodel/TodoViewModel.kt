@@ -5,24 +5,23 @@ import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.sangeetha.mytodo.database.TodoEntity
-import com.sangeetha.mytodo.database.TodoFolderEntity
+import com.sangeetha.mytodo.database.TaskEntity
+import com.sangeetha.mytodo.database.ProjectEntity
 import com.sangeetha.mytodo.repository.TodoRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
-import kotlinx.coroutines.launch
 
 class TodoViewModel @ViewModelInject constructor(
     private val repository: TodoRepository,
     @Assisted private val savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
-    fun saveTodo(todo: TodoEntity) = viewModelScope.async(Dispatchers.IO) {
-        repository.insertTodo(todo)
+    fun saveTodo(task: TaskEntity) = viewModelScope.async(Dispatchers.IO) {
+        repository.insertTodo(task)
     }
 
-    fun saveTodoFolder(todoFolder: TodoFolderEntity) = viewModelScope.async(Dispatchers.IO) {
-        repository.insertTodoFolder(todoFolder)
+    fun saveTodoFolder(project: ProjectEntity) = viewModelScope.async(Dispatchers.IO) {
+        repository.insertTodoFolder(project)
     }
 
     fun deleteTodoByFolder(folderId: Long) = viewModelScope.async(Dispatchers.IO) {

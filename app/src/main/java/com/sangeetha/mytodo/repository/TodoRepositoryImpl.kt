@@ -1,51 +1,52 @@
 package com.sangeetha.mytodo.repository
 
-import com.sangeetha.mytodo.database.FolderWithToDos
-import com.sangeetha.mytodo.database.TodoDao
-import com.sangeetha.mytodo.database.TodoEntity
-import com.sangeetha.mytodo.database.TodoFolderEntity
+import com.sangeetha.mytodo.database.ProjectWithTasks
+import com.sangeetha.mytodo.database.TaskDao
+import com.sangeetha.mytodo.database.TaskEntity
+import com.sangeetha.mytodo.database.ProjectEntity
+import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 class TodoRepositoryImpl @Inject constructor(
-    private val todoDao: TodoDao
+    private val taskDao: TaskDao
 ): TodoRepository {
-    override suspend fun insertTodo(todo: TodoEntity) {
-         return todoDao.insertTodo(todo)
+    override suspend fun insertTodo(task: TaskEntity) {
+         return taskDao.insertTodo(task)
     }
 
-    override suspend fun insertTodoFolder(todoFolder: TodoFolderEntity) {
-        return todoDao.insertTodoFolder(todoFolder)
+    override suspend fun insertTodoFolder(project: ProjectEntity) {
+        return taskDao.insertTodoFolder(project)
     }
 
     override suspend fun deleteTodoById(todoId: Long) {
-        return todoDao.deleteTodoById(todoId)
+        return taskDao.deleteTodoById(todoId)
     }
 
     override suspend fun deleteFolderById(folderId: Long) {
-        return todoDao.deleteFolderById(folderId)
+        return taskDao.deleteFolderById(folderId)
     }
 
-    override suspend fun getAllTodo(): List<TodoEntity> {
-        return todoDao.getAllToDos()
+    override suspend fun getAllTodo(): Flow<List<TaskEntity>> {
+        return taskDao.getAllToDos()
     }
 
-    override suspend fun getAllTodoFolders(): List<TodoFolderEntity> {
-        return todoDao.getAllFolders()
+    override suspend fun getAllTodoFolders(): Flow<List<ProjectEntity>> {
+        return taskDao.getAllFolders()
     }
 
-    override suspend fun getTodoById(id: Long): TodoEntity {
-        return todoDao.getTodoById(id)
+    override suspend fun getTodoById(id: Long): Flow<TaskEntity> {
+        return taskDao.getTodoById(id)
     }
 
-    override suspend fun getTodoByDueDate(dueDate: String): List<TodoEntity> {
-        return todoDao.getTodoByDueDate(dueDate)
+    override suspend fun getTodoByDueDate(dueDate: String): Flow<List<TaskEntity>> {
+        return taskDao.getTodoByDueDate(dueDate)
     }
 
-    override suspend fun getTodoByFolder(folderId: Long): List<FolderWithToDos> {
-        return todoDao.getToDosWithFolder(folderId)
+    override suspend fun getTodoByFolder(folderId: Long): Flow<List<ProjectWithTasks>> {
+        return taskDao.getToDosWithFolder(folderId)
     }
 
     override suspend fun deleteAllTodoInTheFolder(folderId: Long) {
-        return todoDao.deleteAllTodoInTheFolder(folderId)
+        return taskDao.deleteAllTodoInTheFolder(folderId)
     }
 }

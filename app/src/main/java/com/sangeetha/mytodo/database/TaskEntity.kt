@@ -10,10 +10,10 @@ import java.text.DateFormat
 
 @Entity
 @Parcelize
-data class TodoEntity(
+data class TaskEntity(
     @PrimaryKey(autoGenerate = true)
-    var todoId: Long,
-    var folderId: Long? = null,
+    var taskId: Long,
+    var projectId: Long? = null,
     var title: String,
     var description: String? = null,
     var createdOn: Long = System.currentTimeMillis(),
@@ -27,22 +27,22 @@ data class TodoEntity(
 
 @Entity
 @Parcelize
-data class TodoFolderEntity(
+data class ProjectEntity(
     @PrimaryKey(autoGenerate = true)
-    var folderId: Long,
-    var folderName: String? = null,
-    var folderImage: String? = null,
+    var projectId: Long,
+    var projectName: String? = null,
+    var projectImage: String? = null,
     var createdOn:  Long = System.currentTimeMillis()
 ): Parcelable
 
 @Parcelize
-data class FolderWithToDos(
+data class ProjectWithTasks(
     @Embedded
-    val folder: TodoFolderEntity,
+    val project: ProjectEntity,
 
     @Relation(
-        parentColumn = "folderId",
-        entityColumn = "folderId"
+        parentColumn = "projectId",
+        entityColumn = "projectId"
     )
-    val toDos: List<TodoEntity>
+    val tasks: List<TaskEntity>
 ): Parcelable

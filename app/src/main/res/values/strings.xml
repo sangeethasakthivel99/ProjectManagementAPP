@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyToDo</string>
+    <string name="app_name">Project Management App</string>
     <string name="home">Home</string>
     <string name="search">Search</string>
     <string name="folders">Folders</string>
@@ -16,8 +16,6 @@
     <string name="title">Title</string>
     <string name="description">Description</string>
     <string name="add_todo">Add Todo</string>
-    <string name="cancel">Cancel</string>
-    <string name="save">Save</string>
     <string name="project_name">PROJECT NAME</string>
     <string name="dummy_project">Dummy Project</string>
     <string name="project_due">Task Due</string>
