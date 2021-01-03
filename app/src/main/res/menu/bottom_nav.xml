@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/home"
+        android:id="@+id/menu_home"
         android:title="@string/home"
         android:icon="@drawable/ic_home" />
 
     <item
-        android:id="@+id/folders"
-        android:title="@string/folders"
+        android:id="@+id/projects"
+        android:title="@string/projects"
         android:icon="@drawable/ic_folder"
         app:showAsAction="always"/>
 
@@ -17,15 +17,15 @@
         android:title="" />
 
     <item
-        android:id="@+id/starred"
-        android:title="@string/starred"
-        android:icon="@drawable/ic_star"
-        app:showAsAction="always"/>
-
-    <item
         android:id="@+id/notification"
         android:title="@string/notifications"
         android:icon="@drawable/ic_notification"
         app:showAsAction="withText"/>
+
+    <item
+        android:id="@+id/starred"
+        android:title="@string/starred"
+        android:icon="@drawable/ic_star"
+        app:showAsAction="always"/>
 
 </menu>

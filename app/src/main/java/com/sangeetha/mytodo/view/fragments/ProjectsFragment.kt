@@ -11,7 +11,7 @@ import com.sangeetha.mytodo.viewmodel.TodoViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class FolderFragment: Fragment() {
+class ProjectsFragment: Fragment() {
 
     private val viewModel: TodoViewModel by viewModels()
 
