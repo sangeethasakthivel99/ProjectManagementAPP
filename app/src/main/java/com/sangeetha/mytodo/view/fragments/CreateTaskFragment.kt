@@ -5,5 +5,5 @@ import com.sangeetha.mytodo.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class CreateTaskFragment: Fragment(R.layout.fragment_create_todo) {
+class CreateTaskFragment: Fragment(R.layout.fragment_create_task) {
 }

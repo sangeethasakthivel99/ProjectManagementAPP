@@ -30,4 +30,5 @@
     <string name="attach_image">Attach Image</string>
     <string name="search">Search</string>
     <string name="create_todo">Create Todo</string>
+    <string name="due_on">Due On</string>
 </resources>
