@@ -31,4 +31,7 @@
     <string name="search">Search</string>
     <string name="create_todo">Create Todo</string>
     <string name="due_on">Due On</string>
+    <string name="cancel">Cancel</string>
+    <string name="do_you_want_to_cancel">Do you want to cancel?</string>
+    <string name="ok">Ok</string>
 </resources>
