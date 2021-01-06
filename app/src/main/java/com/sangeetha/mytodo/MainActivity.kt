@@ -1,12 +1,11 @@
 package com.sangeetha.mytodo
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.sangeetha.mytodo.view.fragments.DashboardFragment
-import com.sangeetha.mytodo.view.fragments.NotificationFragment
-import com.sangeetha.mytodo.view.fragments.ProjectsFragment
-import com.sangeetha.mytodo.view.fragments.StarredFragment
+import com.sangeetha.mytodo.view.fragments.*
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -18,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         alignBottomNavigation()
         addDashBoardFragment()
         setupBottomNavigation()
+        setOnClickListeners()
     }
 
     private fun alignBottomNavigation() {
@@ -52,4 +52,15 @@ class MainActivity : AppCompatActivity() {
             commit()
         }
     }
+
+    private fun setOnClickListeners() {
+        fab.setOnClickListener {
+            navigateToCreateProject()
+        }
+    }
+
+    private fun navigateToCreateProject() {
+        startActivity(Intent(this, CreateProjectActivity::class.java))
+    }
+
 }

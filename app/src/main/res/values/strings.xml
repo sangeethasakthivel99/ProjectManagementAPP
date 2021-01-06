@@ -26,12 +26,11 @@
     <string name="a_simple_task">A simple task</string>
     <string name="due_date">Due Date</string>
     <string name="save">Save</string>
-    <string name="cancel">Cancel</string>
     <string name="attach_image">Attach Image</string>
     <string name="search">Search</string>
     <string name="create_todo">Create Todo</string>
     <string name="due_on">Due On</string>
     <string name="cancel">Cancel</string>
     <string name="do_you_want_to_cancel">Do you want to cancel?</string>
-    <string name="ok">Ok</string>
+    <string name="ok">OK</string>
 </resources>
