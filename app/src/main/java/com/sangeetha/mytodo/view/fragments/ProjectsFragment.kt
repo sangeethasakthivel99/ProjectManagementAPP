@@ -9,6 +9,8 @@ import androidx.fragment.app.viewModels
 import com.sangeetha.mytodo.R
 import com.sangeetha.mytodo.viewmodel.TodoViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.fragment_create_project.*
+import kotlinx.android.synthetic.main.toolbar.view.*
 
 @AndroidEntryPoint
 class ProjectsFragment: Fragment() {
@@ -20,10 +22,23 @@ class ProjectsFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_todo_folders, container, false)
+        return inflater.inflate(R.layout.fragment_projects, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setupToolBar()
+        setClickListeners()
+
+    }
+
+    private fun setupToolBar() {
+        toolbar.toolbarTitle.text = resources.getString(R.string.projects)
+    }
+
+    private fun setClickListeners() {
+        toolbar.backButton.setOnClickListener {
+            requireActivity().supportFragmentManager.popBackStack()
+        }
     }
 }
