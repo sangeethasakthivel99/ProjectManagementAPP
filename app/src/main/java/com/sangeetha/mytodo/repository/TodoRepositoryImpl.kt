@@ -15,7 +15,7 @@ class TodoRepositoryImpl @Inject constructor(
     }
 
     override suspend fun insertTodoFolder(project: ProjectEntity) {
-        return taskDao.insertTodoFolder(project)
+        return taskDao.insertProject(project)
     }
 
     override suspend fun deleteTodoById(todoId: Long) {
@@ -35,7 +35,7 @@ class TodoRepositoryImpl @Inject constructor(
     }
 
     override suspend fun getAllTodoFolders(): Flow<List<ProjectEntity>> {
-        return taskDao.getAllFolders()
+        return taskDao.getAllProjects()
     }
 
     override suspend fun getTodoById(id: Long): Flow<TaskEntity> {

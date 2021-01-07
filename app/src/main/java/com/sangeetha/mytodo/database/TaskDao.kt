@@ -10,7 +10,7 @@ interface TaskDao {
     suspend fun insertTodo(taskEntity: TaskEntity)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertTodoFolder(projectEntity: ProjectEntity)
+    suspend fun insertProject(projectEntity: ProjectEntity)
 
     @Update
     suspend fun updateTodo(taskEntity: TaskEntity)
@@ -21,7 +21,7 @@ interface TaskDao {
 
     @Transaction
     @Query("SELECT * FROM projectentity")
-    fun getAllFolders(): Flow<List<ProjectEntity>>
+    fun getAllProjects(): Flow<List<ProjectEntity>>
 
     @Transaction
     @Query("SELECT * FROM taskentity")
