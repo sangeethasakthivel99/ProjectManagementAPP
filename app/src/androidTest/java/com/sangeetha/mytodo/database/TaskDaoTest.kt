@@ -1,31 +1,10 @@
 package com.sangeetha.mytodo.database
 
-import androidx.room.Room
-import androidx.test.core.app.ApplicationProvider
-import junit.framework.TestCase
-import org.junit.After
-import org.junit.Before
-import org.junit.Rule
+import androidx.test.ext.junit.runners.AndroidJUnit4
+import org.junit.Assert
+import org.junit.Test
+import org.junit.runner.RunWith
 
-class TaskDaoTest {
-
-//        @get:Rule
-//        val instantTaskExecutorRule = InstantTaskExecutorRule()
-//        private lateinit var _db: TestpressDatabase
-//        val db: TestpressDatabase
-//            get() = _db
-//
-//        @Before
-//        fun initDb() {
-//            _db = Room.inMemoryDatabaseBuilder(
-//                ApplicationProvider.getApplicationContext(),
-//                TestpressDatabase::class.java
-//            ).build()
-//        }
-//
-//        @After
-//        fun closeDb() {
-//            _db.close()
-//        }
-//    }
+@RunWith(AndroidJUnit4::class)
+class TaskDaoTest: DbTestMixin() {
 }
