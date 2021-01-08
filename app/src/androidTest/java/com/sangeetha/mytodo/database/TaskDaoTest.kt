@@ -26,7 +26,6 @@ class TaskDaoTest: DbTestMixin() {
         taskDao.insertProject(getProject())
     }
 
-
     private fun getProject(): ProjectEntity {
         return  ProjectEntity(
             projectId = 1,
