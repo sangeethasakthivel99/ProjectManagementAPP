@@ -2,6 +2,7 @@ package com.sangeetha.mytodo.database
 
 import androidx.lifecycle.asLiveData
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert
@@ -12,7 +13,7 @@ import org.junit.runner.RunWith
 class TaskDaoTest: DbTestMixin() {
 
     @Test
-    fun getAllProjectsShouldReturnInsertedProjects() = runBlocking {
+    fun getAllProjectsShouldReturnInsertedProjects() = runBlocking(Dispatchers.IO) {
         insertProjectsIntoDB()
         val projectFlow = db.taskDao().getAllProjects()
         projectFlow.flatMapLatest { projectFlow }
