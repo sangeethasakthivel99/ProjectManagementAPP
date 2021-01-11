@@ -7,10 +7,12 @@ import android.view.View
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.sangeetha.mytodo.R
 import com.sangeetha.mytodo.util.onQueryTextChanged
 import com.sangeetha.mytodo.viewmodel.SearchViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.fragment_tasks.*
 
 @AndroidEntryPoint
 class SearchFragment: Fragment(R.layout.search_fragment) {
@@ -35,5 +37,9 @@ class SearchFragment: Fragment(R.layout.search_fragment) {
         searchView.onQueryTextChanged {
             viewModel.searchQuery.value = it
         }
+    }
+
+    private fun setupRecyclerView() {
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
     }
 }
