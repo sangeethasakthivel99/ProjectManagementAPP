@@ -34,4 +34,6 @@
     <string name="do_you_want_to_cancel">Do you want to cancel?</string>
     <string name="ok">OK</string>
     <string name="empty_notification">No New Notifications</string>
+    <string name="empty_project_error">Project Name should not be Null</string>
+    <string name="empty_duedate_error">Due Date should not be Null</string>
 </resources>

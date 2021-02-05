@@ -21,7 +21,7 @@ class TodoViewModel @ViewModelInject constructor(
     }
 
     fun saveTodoFolder(project: ProjectEntity) = viewModelScope.async(Dispatchers.IO) {
-        repository.insertTodoFolder(project)
+        repository.createProject(project)
     }
 
     fun deleteTodoByFolder(folderId: Long) = viewModelScope.async(Dispatchers.IO) {

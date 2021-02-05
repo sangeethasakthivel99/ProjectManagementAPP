@@ -14,7 +14,7 @@ class TodoRepositoryImpl @Inject constructor(
          return taskDao.insertTodo(task)
     }
 
-    override suspend fun insertTodoFolder(project: ProjectEntity) {
+    override suspend fun createProject(project: ProjectEntity) {
         return taskDao.insertProject(project)
     }
 

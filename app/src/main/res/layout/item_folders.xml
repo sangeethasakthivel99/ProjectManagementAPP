@@ -26,8 +26,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_gravity="center"
-                android:gravity="center"
                 android:background="@drawable/fab_gradiant"
+                android:minHeight="140dp"
                 android:padding="16dp">
 
                <LinearLayout
@@ -41,24 +41,19 @@
                        android:text="@string/dashboard"
                        android:textSize="18sp"
                        android:layout_weight="1"
+                       android:maxLines="2"
+                       android:ellipsize="end"
                        android:textColor="@color/white" />
-
-                   <ImageButton
-                       android:id="@+id/star"
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:background="@null"
-                       android:src="@drawable/star_selector"/>
 
                </LinearLayout>
 
                 <TextView
-                    android:id="@+id/completedMetric"
+                    android:id="@+id/createdOn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
                     android:layout_marginTop="16sp"
-                    tools:text="8/15 Completed"
+                    tools:text="Created on 10 July 2020"
                     android:textColor="@color/white_70" />
             </LinearLayout>
 

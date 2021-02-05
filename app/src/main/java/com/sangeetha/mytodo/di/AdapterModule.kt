@@ -1,5 +1,6 @@
 package com.sangeetha.mytodo.di
 
+import com.sangeetha.mytodo.view.adapters.ProjectAdapter
 import com.sangeetha.mytodo.view.adapters.TaskAdapter
 import dagger.Module
 import dagger.Provides
@@ -12,4 +13,7 @@ class AdapterModule {
 
     @Provides
     fun provideTaskAdapter() = TaskAdapter()
+
+    @Provides
+    fun provideProjectAdapter() = ProjectAdapter()
 }

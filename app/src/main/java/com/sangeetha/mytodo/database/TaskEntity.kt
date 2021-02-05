@@ -12,7 +12,7 @@ import java.text.DateFormat
 @Parcelize
 data class TaskEntity(
     @PrimaryKey(autoGenerate = true)
-    var taskId: Long,
+    var taskId: Long? = null,
     var projectId: Long? = null,
     var title: String,
     var description: String? = null,
@@ -29,11 +29,15 @@ data class TaskEntity(
 @Parcelize
 data class ProjectEntity(
     @PrimaryKey(autoGenerate = true)
-    var projectId: Long,
+    var projectId: Long? = null,
     var projectName: String? = null,
-    var projectImage: String? = null,
+    var duedate: String? = null,
+    var isImportant: Boolean,
     var createdOn:  Long = System.currentTimeMillis()
-): Parcelable
+): Parcelable {
+    val getCreatedDateInFormat: String
+        get() = DateFormat.getDateTimeInstance().format(createdOn)
+}
 
 @Parcelize
 data class ProjectWithTasks(

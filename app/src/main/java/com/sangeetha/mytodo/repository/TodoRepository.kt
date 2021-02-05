@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface TodoRepository {
     suspend fun insertTodo(task: TaskEntity)
-    suspend fun insertTodoFolder(project: ProjectEntity)
+    suspend fun createProject(project: ProjectEntity)
     suspend fun deleteTodoById(todoId: Long)
     suspend fun deleteFolderById(folderId: Long)
     fun getAllTasks(): Flow<List<TaskEntity>>
